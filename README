@@ -1,17 +1,23 @@
 OVERVIEW
 
+Kudos to Eric Wright for his work! This is an adaptation for my needs, free for the world to use.
+
+
 The template will create a new Rails app and then: 
 - add authlogic and create working User and UserSession models, controllers, and views
-- install haml and sass
+- install haml and sass using Compass/gs960
+- install sass_on_heroku plugin so you're ready for heroku deployment
+- adds a .gems file for heroku to digest on deployment. A couple extra gems are there that I like to have available: RedCloth 4.1.9 and cancan.
 - remove junk like public/index.html
 - add jquery
 - add reset.css
-- create and run a script/mkdb script that will reload the db with sample data
-- create a new git repo and add everything to it
+- create a new git repo and add everything to it except the stuff you never want in your git repo.
+
+This does not install the heroku gem. It assumes you have heroku setup already. 
 
 CAVEATS
 
-This Rails template assumes you'll be creating the new rails project next to this template directory.  A bad assumption, I know -- I'll fix it as soon as I know how to reference the location of the template as a variable (the way you can get the rails path with @root).  
+The same as Eric's: This Rails template assumes you'll be creating the new rails project next to this template directory.  A bad assumption, I know -- I'll fix it as soon as I know how to reference the location of the template as a variable (the way you can get the rails path with @root).  
 
 INSTALLING
 
@@ -22,7 +28,7 @@ template
 
 Run the rails command and pass in the main template:
 
-$ rails foo -m ./rails-template/main.template.rb
+$ rails foo -m ./master_template/main.template.rb
 
-This will prompt once for your password (when you run sudo rake gems:install), but other than that it's all automated.  
+This will prompt once for your password (when you run sudo rake gems:install), then for default folders for your sass_dir and css_dir.
 
